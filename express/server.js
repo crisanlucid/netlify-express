@@ -13,11 +13,6 @@ router.get('/', (req, res) => {
   res.write('<h1>Hello from Express.js!</h1>');
   res.end();
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
-
 router.get('/api/v1/resume', (req, res) => res.json({ route: req.originalUrl }));
 
 app.use(bodyParser.json());
